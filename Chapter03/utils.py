@@ -1,8 +1,5 @@
-import sklearn 
-import sklearn.linear_model 
 import numpy as np 
 import matplotlib.pyplot as plt 
-import matplotlib
 import matplotlib.patches as mpatches
 
 def plot_decision_boundary(pred_func, X, Y): 

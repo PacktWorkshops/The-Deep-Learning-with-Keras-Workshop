@@ -64,6 +64,7 @@ class Test(unittest.TestCase):
         self.X = pd.DataFrame(sc.fit_transform(self.X), columns=self.X.columns)
 
         self.seed = 2
+        self.n_folds = 5
         
     def test_input_frames(self):
         pd_testing.assert_frame_equal(self.activity.X, self.X)
@@ -73,7 +74,6 @@ class Test(unittest.TestCase):
         np.random.seed(self.seed)
         random.set_seed(self.seed)
         
-        n_folds = 5
         batch_size=20
         epochs=50
 
@@ -81,7 +81,7 @@ class Test(unittest.TestCase):
         models = [build_model_1, build_model_2, build_model_3]
         for m in range(len(models)):
             classifier = KerasClassifier(build_fn=models[m], epochs=epochs, batch_size=batch_size, verbose=0)
-            kfold = StratifiedKFold(n_splits=n_folds, shuffle=True, random_state=seed)
+            kfold = StratifiedKFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
             result = cross_val_score(classifier, self.X, self.y, cv=kfold)
             self.results_1.append(result)
         
@@ -100,7 +100,7 @@ class Test(unittest.TestCase):
         for e in range(len(epochs)):
             for b in range(len(batches)):
                 classifier = KerasClassifier(build_fn=build_model_2, epochs=epochs[e], batch_size=batches[b], verbose=0)
-                kfold = StratifiedKFold(n_splits=n_folds, shuffle=True, random_state=seed)
+                kfold = StratifiedKFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
                 result = cross_val_score(classifier, self.X, self.y, cv=kfold)
                 self.results_2.append(result)
         
@@ -123,7 +123,7 @@ class Test(unittest.TestCase):
                 optimizer = optimizers[o]
                 activation = activations[a]
                 classifier = KerasClassifier(build_fn=build_model_2, epochs=epochs, batch_size=batch_size, verbose=0)
-                kfold = StratifiedKFold(n_splits=n_folds, shuffle=True, random_state=seed)
+                kfold = StratifiedKFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
                 result = cross_val_score(classifier, self.X, self.y, cv=kfold)
                 self.results_3.append(result)
 

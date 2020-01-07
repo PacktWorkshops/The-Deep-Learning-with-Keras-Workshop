@@ -39,14 +39,15 @@ class Test(unittest.TestCase):
         self.data = pd.read_csv(self.data_loc, sep=';', names=colnames)
         self.X = self.data.drop('LC50', axis=1)
         self.y = self.data['LC50']
+        self.seed = 1
         
     def test_input_frames(self):
         pd_testing.assert_frame_equal(self.exercise.X, self.X)
         pd_testing.assert_series_equal(self.exercise.y, self.y)
 
     def test_model_perf(self):
-        np.random.seed(1)
-        random.set_seed(1)
+        np.random.seed(self.seed)
+        random.set_seed(self.seed)
         model = KerasRegressor(build_fn= build_model, epochs=100, batch_size=20, verbose=0)
         kf = KFold(n_splits=5)
         self.results = cross_val_score(model, self.X, self.y, cv=kf)

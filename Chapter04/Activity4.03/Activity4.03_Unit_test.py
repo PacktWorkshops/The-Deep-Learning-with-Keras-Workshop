@@ -11,8 +11,8 @@ from keras.layers import Dense, Activation
 from tensorflow import random
 from keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.model_selection import KFold, StratifiedKFold, cross_val_score
-from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
 
 def build_model_1(optimizer='adam'):
@@ -56,18 +56,16 @@ class Test(unittest.TestCase):
         import Activity4_03
         self.activity = Activity4_03
         
-        dirname = self._dirname_if_file('../data/HCV_feats.csv')
-        self.X_loc = os.path.join(dirname, 'HCV_feats.csv')
-        self.y_loc = os.path.join(dirname, 'HCV_target.csv')
+        dirname = self._dirname_if_file('../data/traffic_volume_feats.csv')
+        self.X_loc = os.path.join(dirname, 'traffic_volume_feats.csv')
+        self.y_loc = os.path.join(dirname, 'traffic_volume_target.csv')
         
         self.X = pd.read_csv(self.X_loc)
         self.y = pd.read_csv(self.y_loc)
         
-        sc = StandardScaler()
-        self.X = pd.DataFrame(sc.fit_transform(self.X), columns=self.X.columns)
-
         self.seed=1
-         
+        self.n_folds = 5
+        
             
     def test_input_frames(self):
         pd_testing.assert_frame_equal(self.activity.X, self.X)
@@ -77,18 +75,19 @@ class Test(unittest.TestCase):
         np.random.seed(self.seed)
         random.set_seed(self.seed)
         
-        n_folds = 5
         self.results_1 = []
         models = [build_model_1, build_model_2, build_model_3]
         for i in range(len(models)):
             regressor = KerasRegressor(build_fn=models[i], epochs=100, batch_size=50, verbose=0)
             model = make_pipeline(StandardScaler(), regressor)
-            kfold = KFold(n_splits=n_folds, shuffle=True, random_state=seed)
+            kfold = KFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
             result = cross_val_score(model, self.X, self.y, cv=kfold)
             self.results_1.append(result)
 
-        np_testing.assert_almost_equal(self.results_1.mean(), self.activity.results_1.mean(), decimal=1)
-        np_testing.assert_almost_equal(self.results_1.std(), self.activity.results_1.std(), decimal=1)
+        np_testing.assert_almost_equal(
+            np.array(self.results_1).mean(axis=1), np.array(self.activity.results_1).mean(axis=1), decimal=1)
+        np_testing.assert_almost_equal(
+            np.array(self.results_1).std(axis=1), np.array(self.activity.results_1).std(axis=1), decimal=1)
 
     def test_batch_epoch_iter(self):
         np.random.seed(self.seed)
@@ -100,12 +99,14 @@ class Test(unittest.TestCase):
             for j in range(len(batches)):
                 regressor = KerasRegressor(build_fn=build_model_2, epochs=epochs[i], batch_size=batches[j], verbose=0)
                 model = make_pipeline(StandardScaler(), regressor)
-                kfold = KFold(n_splits=n_folds, shuffle=True, random_state=seed)
+                kfold = KFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
                 result = cross_val_score(model, self.X, self.y, cv=kfold)
                 self.results_2.append(result)
 
-        np_testing.assert_almost_equal(self.results_2.mean(), self.activity.results_2.mean(), decimal=1)
-        np_testing.assert_almost_equal(self.results_2.std(), self.activity.results_2.std(), decimal=1)
+        np_testing.assert_almost_equal(
+            np.array(self.results_2).mean(axis=1), np.array(self.activity.results_2).mean(axis=1), decimal=1)
+        np_testing.assert_almost_equal(
+            np.array(self.results_2).std(axis=1), np.array(self.activity.results_2).std(axis=1), decimal=1)
 
     def test_opt_act_iter(self):
         np.random.seed(self.seed)
@@ -116,12 +117,14 @@ class Test(unittest.TestCase):
         for optimizer in optimizers:
             regressor = KerasRegressor(build_fn=build_model_2, epochs=100, batch_size=50, verbose=0)
             model = make_pipeline(StandardScaler(), regressor)
-            kfold = KFold(n_splits=n_folds, shuffle=True, random_state=seed)
+            kfold = KFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
             result = cross_val_score(model, self.X, self.y, cv=kfold)
             self.results_3.append(result)
 
-        np_testing.assert_almost_equal(self.results_3.mean(), self.activity.results_3.mean(), decimal=1)
-        np_testing.assert_almost_equal(self.results_3.std(), self.activity.results_3.std(), decimal=1)
+        np_testing.assert_almost_equal(
+            np.array(self.results_3).mean(axis=1), np.array(self.activity.results_3).mean(axis=1), decimal=1)
+        np_testing.assert_almost_equal(
+            np.array(self.results_3).std(axis=1), np.array(self.activity.results_3).std(axis=1), decimal=1)
 
 if __name__ == '__main__':
     unittest.main()

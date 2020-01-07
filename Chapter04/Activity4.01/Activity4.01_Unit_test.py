@@ -57,7 +57,7 @@ class Test(unittest.TestCase):
         random.set_seed(self.seed)
         
         classifier = KerasClassifier(build_fn=build_model, epochs=100, batch_size=20, verbose=0, shuffle=False)
-        kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=seed)
+        kfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=self.seed)
         self.results = cross_val_score(classifier, self.X, self.y, cv=kfold)
         
         np_testing.assert_almost_equal(self.results.mean(), self.activity.results.mean(), decimal=1)

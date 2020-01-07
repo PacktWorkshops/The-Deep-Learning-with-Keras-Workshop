@@ -103,7 +103,7 @@ class Test(unittest.TestCase):
     def test_param_set_3(self):
         def build_model(rate):
             model = Sequential()
-            model.add(Dense(10, input_dim=X.shape[1], activation='relu'))
+            model.add(Dense(10, input_dim=self.X.shape[1], activation='relu'))
             model.add(Dropout(rate))
             model.add(Dense(6, activation='relu'))
             model.add(Dropout(rate))
@@ -130,7 +130,7 @@ class Test(unittest.TestCase):
     def test_param_set_4(self):
         def build_model(rate):
             model = Sequential()
-            model.add(Dense(10, input_dim=X.shape[1], activation='relu'))
+            model.add(Dense(10, input_dim=self.X.shape[1], activation='relu'))
             model.add(Dropout(rate))
             model.add(Dense(6, activation='relu'))
             model.add(Dropout(rate))

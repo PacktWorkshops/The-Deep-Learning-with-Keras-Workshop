@@ -95,7 +95,6 @@ class NotebookFinder(object):
         return self.loaders[key]
 
 sys.meta_path.append(NotebookFinder())
-import Activity3_01
 
 class Test(unittest.TestCase):
     
@@ -106,7 +105,7 @@ class Test(unittest.TestCase):
             return os.path.dirname(os.path.abspath(filename))
      
     def setUp(self):
-        
+        import Activity3_01
         self.activity = Activity3_01
         
         dirname = self._dirname_if_file('../data/outlier_feats.csv')

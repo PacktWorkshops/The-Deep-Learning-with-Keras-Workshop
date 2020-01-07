@@ -97,7 +97,6 @@ class NotebookFinder(object):
         return self.loaders[key]
 
 sys.meta_path.append(NotebookFinder())
-import Activity3_02
         
 class Test(unittest.TestCase):
     
@@ -108,6 +107,7 @@ class Test(unittest.TestCase):
             return os.path.dirname(os.path.abspath(filename))
      
     def setUp(self):
+        import Activity3_02
         self.activity = Activity3_02
         
         dirname = self._dirname_if_file('../data/HCV_feats.csv')

@@ -97,7 +97,8 @@ class NotebookFinder(object):
         return self.loaders[key]
 
 sys.meta_path.append(NotebookFinder())
-
+import Activity3_02
+        
 class Test(unittest.TestCase):
     
     def _dirname_if_file(self, filename):
@@ -107,7 +108,6 @@ class Test(unittest.TestCase):
             return os.path.dirname(os.path.abspath(filename))
      
     def setUp(self):
-        import Activity3_02
         self.activity = Activity3_02
         
         dirname = self._dirname_if_file('../data/HCV_feats.csv')
@@ -135,9 +135,11 @@ class Test(unittest.TestCase):
         classifier.fit(self.X_train, self.y_train, batch_size = 20, epochs = 100, validation_split=0.1, shuffle=False)
         self.test_loss, self.test_acc = classifier.evaluate(self.X_test, self.y_test['AdvancedFibrosis'])
         
-    def test_values(self):
+    def test_input_frames(self):
         pd_testing.assert_frame_equal(self.activity.X, self.X)
         pd_testing.assert_frame_equal(self.activity.y, self.y)
+        
+    def test_model_perf(self):
         np_testing.assert_almost_equal(self.activity.test_loss, self.test_loss, decimal=2)
         np_testing.assert_almost_equal(self.activity.test_acc, self.test_acc, decimal=1)
 

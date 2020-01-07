@@ -12,7 +12,6 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 from tensorflow import random
 
-
 def find_notebook(fullname, path=None):
     """find a notebook, given its fully qualified name and an optional path
 
@@ -96,6 +95,7 @@ class NotebookFinder(object):
         return self.loaders[key]
 
 sys.meta_path.append(NotebookFinder())
+import Activity3_01
 
 class Test(unittest.TestCase):
     
@@ -106,7 +106,7 @@ class Test(unittest.TestCase):
             return os.path.dirname(os.path.abspath(filename))
      
     def setUp(self):
-        import Activity3_01
+        
         self.activity = Activity3_01
         
         dirname = self._dirname_if_file('../data/outlier_feats.csv')
@@ -167,13 +167,23 @@ class Test(unittest.TestCase):
         self.activity_test_loss_5 = self.activity.model_4.evaluate(self.activity.feats, self.activity.target)
         
         
-    def test_values(self):
+    def test_input_frames(self):
         pd_testing.assert_frame_equal(self.activity.feats, self.feats)
         pd_testing.assert_frame_equal(self.activity.target, self.target)
+
+    def test_model_1(self):
         np_testing.assert_almost_equal(self.test_loss_1, self.activity_test_loss_1, decimal=1)
+
+    def test_model_2(self):
         np_testing.assert_almost_equal(self.test_loss_2, self.activity_test_loss_2, decimal=1)
+
+    def test_model_3(self):
         np_testing.assert_almost_equal(self.test_loss_3, self.activity_test_loss_3, decimal=1)
+
+    def test_model_4(self):
         np_testing.assert_almost_equal(self.test_loss_4, self.activity_test_loss_4, decimal=1)
+
+    def test_model_5(self):
         np_testing.assert_almost_equal(self.test_loss_5, self.activity_test_loss_5, decimal=1)
 
 if __name__ == '__main__':

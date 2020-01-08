@@ -31,16 +31,22 @@ class Test(unittest.TestCase):
         self.X = pd.read_csv(self.X_loc)
         self.y = pd.read_csv(self.y_loc)
 
-        seed=1
-        np.random.seed(seed)
-        random.set_seed(seed)
+        self.seed=1
+        np.random.seed(self.seed)
+        random.set_seed(self.seed)
         sc = StandardScaler()
         self.X = pd.DataFrame(sc.fit_transform(self.X), columns=self.X.columns)
         self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            self.X, self.y, test_size=0.2, random_state=seed)
+            self.X, self.y, test_size=0.2, random_state=self.seed)
         
-        np.random.seed(seed)
-        random.set_seed(seed)
+        
+    def test_input_frames(self):
+        pd_testing.assert_frame_equal(self.activity.X, self.X)
+        pd_testing.assert_frame_equal(self.activity.y, self.y)
+        
+    def test_model_perf(self):
+        np.random.seed(self.seed)
+        random.set_seed(self.seed)
         classifier = Sequential()
         classifier.add(Dense(units = 4, activation = 'tanh', input_dim = self.X_train.shape[1]))
         classifier.add(Dense(units = 2, activation = 'tanh'))
@@ -49,11 +55,6 @@ class Test(unittest.TestCase):
         classifier.fit(self.X_train, self.y_train, batch_size = 20, epochs = 100, validation_split=0.1, shuffle=False)
         self.test_loss, self.test_acc = classifier.evaluate(self.X_test, self.y_test['AdvancedFibrosis'])
         
-    def test_input_frames(self):
-        pd_testing.assert_frame_equal(self.activity.X, self.X)
-        pd_testing.assert_frame_equal(self.activity.y, self.y)
-        
-    def test_model_perf(self):
         np_testing.assert_almost_equal(self.activity.test_loss, self.test_loss, decimal=2)
         np_testing.assert_almost_equal(self.activity.test_acc, self.test_acc, decimal=1)
 

@@ -30,6 +30,13 @@ class Test(unittest.TestCase):
         self.X = pd.read_csv(self.X_loc)
         self.y = pd.read_csv(self.y_loc)
 
+        
+        
+    def test_input_frames(self):
+        pd_testing.assert_frame_equal(self.exercise.X, self.X)
+        pd_testing.assert_frame_equal(self.exercise.y, self.y)
+
+    def test_model_perf(self):
         np.random.seed(1)
         random.set_seed(1)
         model = Sequential()
@@ -39,12 +46,6 @@ class Test(unittest.TestCase):
         model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
         model.fit(self.X, self.y, epochs=100, batch_size=5, verbose=0, validation_split=0.2, shuffle=False)
         self.y_predicted = model.predict(self.X.iloc[0:10,:])
-        
-    def test_input_frames(self):
-        pd_testing.assert_frame_equal(self.exercise.X, self.X)
-        pd_testing.assert_frame_equal(self.exercise.y, self.y)
-
-    def test_model_perf(self):
         np_testing.assert_array_equal(np.round(self.exercise.y_predicted), np.round(self.y_predicted))
 
 if __name__ == '__main__':

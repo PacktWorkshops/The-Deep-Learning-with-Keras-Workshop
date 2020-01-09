@@ -47,8 +47,8 @@ class Test(unittest.TestCase):
         self.seed = 1
         
     def test_input_frames(self):
-        pd_testing.assert_frame_equal(self.exercise.X, self.X)
-        pd_testing.assert_frame_equal(self.exercise.y, self.y)
+        pd_testing.assert_frame_equal(self.activity.X, self.X)
+        pd_testing.assert_frame_equal(self.activity.y, self.y)
 
     def test_param_set_1(self):
         def build_model(lambda_parameter):
@@ -72,7 +72,7 @@ class Test(unittest.TestCase):
         self.results_1 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_1.best_score_,
-                                       self.results_1.best_score_, significance=2)
+                                       self.results_1.best_score_, significant=2)
 
         
     def test_param_set_2(self):
@@ -98,7 +98,7 @@ class Test(unittest.TestCase):
         self.results_2 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_2.best_score_,
-                                       self.results_2.best_score_, significance=2)
+                                       self.results_2.best_score_, significant=2)
 
     def test_param_set_3(self):
         def build_model(rate):
@@ -125,7 +125,7 @@ class Test(unittest.TestCase):
         self.results_3 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_3.best_score_,
-                                       self.results_3.best_score_, significance=2)
+                                       self.results_3.best_score_, significant=2)
 
     def test_param_set_4(self):
         def build_model(rate):
@@ -152,7 +152,7 @@ class Test(unittest.TestCase):
         self.results_4 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_4.best_score_,
-                                       self.results_4.best_score_, significance=2)
+                                       self.results_4.best_score_, significant=2)
         
 if __name__ == '__main__':
     unittest.main()

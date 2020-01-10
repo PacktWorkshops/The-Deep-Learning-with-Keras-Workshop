@@ -7,20 +7,12 @@ import os
 import import_ipynb
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPool2D, Flatten, Dense
-import numpy as np
 from tensorflow import random
 from keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image
 
 class Test(unittest.TestCase):
     
-    def _dirname_if_file(self, filename):
-        if os.path.isdir(filename):
-            return filename
-        else:
-            return os.path.dirname(os.path.abspath(filename))
-
-
     def setUp(self):
         import Activity7_02
         self.activity = Activity7_02

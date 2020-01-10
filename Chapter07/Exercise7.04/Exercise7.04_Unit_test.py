@@ -7,7 +7,6 @@ import os
 import import_ipynb
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPool2D, Flatten, Dense
-import numpy as np
 from tensorflow import random
 from keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image

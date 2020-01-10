@@ -63,7 +63,7 @@ class Test(unittest.TestCase):
         np.random.seed(self.seed)
         random.set_seed(self.seed)
         
-        model = KerasClassifier(build_fn=build_model, verbose=0)
+        model = KerasClassifier(build_fn=build_model, verbose=0, shuffle=False)
         lambda_parameter = [0.01, 0.5, 1]
         epochs = [50, 100]
         batch_size = [20]
@@ -89,7 +89,7 @@ class Test(unittest.TestCase):
         np.random.seed(self.seed)
         random.set_seed(self.seed)
         
-        model = KerasClassifier(build_fn=build_model, verbose=0)
+        model = KerasClassifier(build_fn=build_model, verbose=0, shuffle=False)
         lambda_parameter = [0.001, 0.01, 0.05, 0.1]
         epochs = [100]
         batch_size = [20]
@@ -116,7 +116,7 @@ class Test(unittest.TestCase):
         np.random.seed(self.seed)
         random.set_seed(self.seed)
         
-        model = KerasClassifier(build_fn=build_model, verbose=0)
+        model = KerasClassifier(build_fn=build_model, verbose=0, shuffle=False)
         rate = [0, 0.1, 0.2]
         epochs = [50, 100]
         batch_size = [20]
@@ -143,7 +143,7 @@ class Test(unittest.TestCase):
         np.random.seed(self.seed)
         random.set_seed(self.seed)
         
-        model = KerasClassifier(build_fn=build_model, verbose=0)
+        model = KerasClassifier(build_fn=build_model, verbose=0, shuffle=False)
         rate = [0.0, 0.05, 0.1]
         epochs = [100]
         batch_size = [20]

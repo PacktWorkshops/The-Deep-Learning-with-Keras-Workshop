@@ -80,7 +80,7 @@ class Test(unittest.TestCase):
         self.results_1 =[]
         models = [build_model_1, build_model_2, build_model_3]
         for m in range(len(models)):
-            classifier = KerasClassifier(build_fn=models[m], epochs=epochs, batch_size=batch_size, verbose=0)
+            classifier = KerasClassifier(build_fn=models[m], epochs=epochs, batch_size=batch_size, verbose=0, shuffle=False)
             kfold = StratifiedKFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
             result = cross_val_score(classifier, self.X, self.y, cv=kfold)
             self.results_1.append(result)
@@ -99,7 +99,7 @@ class Test(unittest.TestCase):
         self.results_2 =[]
         for e in range(len(epochs)):
             for b in range(len(batches)):
-                classifier = KerasClassifier(build_fn=build_model_2, epochs=epochs[e], batch_size=batches[b], verbose=0)
+                classifier = KerasClassifier(build_fn=build_model_2, epochs=epochs[e], batch_size=batches[b], verbose=0, shuffle=False)
                 kfold = StratifiedKFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
                 result = cross_val_score(classifier, self.X, self.y, cv=kfold)
                 self.results_2.append(result)
@@ -122,7 +122,7 @@ class Test(unittest.TestCase):
             for a in range(len(activations)):
                 optimizer = optimizers[o]
                 activation = activations[a]
-                classifier = KerasClassifier(build_fn=build_model_2, epochs=epochs, batch_size=batch_size, verbose=0)
+                classifier = KerasClassifier(build_fn=build_model_2, epochs=epochs, batch_size=batch_size, verbose=0, shuffle=False)
                 kfold = StratifiedKFold(n_splits=self.n_folds, shuffle=True, random_state=self.seed)
                 result = cross_val_score(classifier, self.X, self.y, cv=kfold)
                 self.results_3.append(result)

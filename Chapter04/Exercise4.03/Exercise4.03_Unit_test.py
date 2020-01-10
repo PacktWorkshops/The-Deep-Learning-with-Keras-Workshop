@@ -79,7 +79,7 @@ class Test(unittest.TestCase):
         models = [build_model_1, build_model_2, build_model_3]
         # loop over three models
         for m in range(len(models)):
-            model = KerasRegressor(build_fn=models[m], epochs=100, batch_size=20, verbose=0)
+            model = KerasRegressor(build_fn=models[m], epochs=100, batch_size=20, verbose=0, shuffle=False)
             kf = KFold(n_splits=3)
             result = cross_val_score(model, self.X, self.y, cv=kf)
             self.results_1.append(result)
@@ -102,7 +102,7 @@ class Test(unittest.TestCase):
         # Loop over pairs of epochs and batch_size
         for e in range(len(epochs)):
             for b in range(len(batches)):
-                model = KerasRegressor(build_fn= build_model_2, epochs= epochs[e], batch_size= batches[b], verbose=0)
+                model = KerasRegressor(build_fn= build_model_2, epochs= epochs[e], batch_size= batches[b], verbose=0, shuffle=False)
                 kf = KFold(n_splits=3)
                 result = cross_val_score(model, self.X, self.y, cv=kf)
                 self.results_2.append(result)
@@ -123,7 +123,7 @@ class Test(unittest.TestCase):
             for a in range(len(activations)):
                 optimizer = optimizers[o]
                 activation = activations[a]
-                model = KerasRegressor(build_fn= build_model_2_mod, epochs=100, batch_size=20, verbose=0)
+                model = KerasRegressor(build_fn= build_model_2_mod, epochs=100, batch_size=20, verbose=0, shuffle=False)
                 kf = KFold(n_splits=3)
                 result = cross_val_score(model, self.X, self.y, cv=kf)
                 self.results_3.append(result)

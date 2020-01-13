@@ -67,7 +67,7 @@ class Test(unittest.TestCase):
         self.test_loss, self.test_acc = model.evaluate(self.X_test, self.y_test)
         
         np_testing.assert_approx_equal(self.activity.test_loss,
-                                       self.test_loss, significant=1)
+                                       self.test_loss, significant=0)
         
     def test_null_acc(self):
         ex_null = self.activity.y_test['class'].value_counts(normalize=True).loc[0]

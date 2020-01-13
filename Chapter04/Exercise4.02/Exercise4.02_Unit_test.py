@@ -51,7 +51,7 @@ class Test(unittest.TestCase):
         model = KerasRegressor(build_fn= build_model, epochs=100, batch_size=20, verbose=0)
         kf = KFold(n_splits=5)
         self.results = cross_val_score(model, self.X, self.y, cv=kf)
-        np_testing.assert_array_almost_equal(self.exercise.results, self.results, decimal=2)
+        np_testing.assert_array_almost_equal(self.exercise.results, self.results, decimal=0)
 
 
 if __name__ == '__main__':

@@ -54,7 +54,7 @@ class Test(unittest.TestCase):
         model_1.fit(self.X_train, self.y_train, epochs=300, batch_size=50, verbose=0)
         loss = model_1.evaluate(self.X_test, self.y_test)
         ex_loss = self.exercise.model_1.evaluate(self.exercise.X_test, self.exercise.y_test)
-        np_testing.assert_approx_equal(loss, ex_loss, significant=2)
+        np_testing.assert_approx_equal(loss, ex_loss, significant=0)
 
         
     def test_model_2(self):
@@ -75,7 +75,7 @@ class Test(unittest.TestCase):
         model_2.fit(self.X_train, self.y_train, epochs=300, batch_size=50, verbose=0)
         loss = model_2.evaluate(self.X_test, self.y_test)
         ex_loss = self.exercise.model_2.evaluate(self.exercise.X_test, self.exercise.y_test)
-        np_testing.assert_approx_equal(loss, ex_loss, significant=2)
+        np_testing.assert_approx_equal(loss, ex_loss, significant=0)
 
     def test_model_3(self):
         np.random.seed(self.seed)
@@ -98,7 +98,7 @@ class Test(unittest.TestCase):
         model_3.fit(self.X_train, self.y_train, epochs=300, batch_size=50, verbose=0)
         loss = model_3.evaluate(self.X_test, self.y_test)
         ex_loss = self.exercise.model_3.evaluate(self.exercise.X_test, self.exercise.y_test)
-        np_testing.assert_approx_equal(loss, ex_loss, significant=2)
+        np_testing.assert_approx_equal(loss, ex_loss, significant=0)
         
 if __name__ == '__main__':
     unittest.main()

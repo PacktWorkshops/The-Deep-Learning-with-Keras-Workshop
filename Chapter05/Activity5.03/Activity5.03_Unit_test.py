@@ -72,7 +72,7 @@ class Test(unittest.TestCase):
         self.results_1 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_1.best_score_,
-                                       self.results_1.best_score_, significant=2)
+                                       self.results_1.best_score_, significant=1)
 
         
     def test_param_set_2(self):
@@ -98,7 +98,7 @@ class Test(unittest.TestCase):
         self.results_2 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_2.best_score_,
-                                       self.results_2.best_score_, significant=2)
+                                       self.results_2.best_score_, significant=1)
 
     def test_param_set_3(self):
         def build_model(rate):
@@ -125,7 +125,7 @@ class Test(unittest.TestCase):
         self.results_3 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_3.best_score_,
-                                       self.results_3.best_score_, significant=2)
+                                       self.results_3.best_score_, significant=1)
 
     def test_param_set_4(self):
         def build_model(rate):
@@ -152,7 +152,7 @@ class Test(unittest.TestCase):
         self.results_4 = grid_seach.fit(self.X, self.y)
         
         np_testing.assert_approx_equal(self.activity.results_4.best_score_,
-                                       self.results_4.best_score_, significant=2)
+                                       self.results_4.best_score_, significant=1)
         
 if __name__ == '__main__':
     unittest.main()

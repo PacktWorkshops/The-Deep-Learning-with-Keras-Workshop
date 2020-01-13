@@ -85,9 +85,9 @@ class Test(unittest.TestCase):
             self.results_1.append(result)
 
         np_testing.assert_almost_equal(
-            np.array(self.results_1).mean(axis=1), np.array(self.activity.results_1).mean(axis=1), decimal=1)
+            np.array(self.results_1).mean(axis=1), np.array(self.activity.results_1).mean(axis=1), decimal=0)
         np_testing.assert_almost_equal(
-            np.array(self.results_1).std(axis=1), np.array(self.activity.results_1).std(axis=1), decimal=1)
+            np.array(self.results_1).std(axis=1), np.array(self.activity.results_1).std(axis=1), decimal=0)
 
     def test_batch_epoch_iter(self):
         np.random.seed(self.seed)
@@ -104,9 +104,9 @@ class Test(unittest.TestCase):
                 self.results_2.append(result)
 
         np_testing.assert_almost_equal(
-            np.array(self.results_2).mean(axis=1), np.array(self.activity.results_2).mean(axis=1), decimal=1)
+            np.array(self.results_2).mean(axis=1), np.array(self.activity.results_2).mean(axis=1), decimal=0)
         np_testing.assert_almost_equal(
-            np.array(self.results_2).std(axis=1), np.array(self.activity.results_2).std(axis=1), decimal=1)
+            np.array(self.results_2).std(axis=1), np.array(self.activity.results_2).std(axis=1), decimal=0)
 
     def test_opt_act_iter(self):
         np.random.seed(self.seed)
@@ -122,9 +122,9 @@ class Test(unittest.TestCase):
             self.results_3.append(result)
 
         np_testing.assert_almost_equal(
-            np.array(self.results_3).mean(axis=1), np.array(self.activity.results_3).mean(axis=1), decimal=1)
+            np.array(self.results_3).mean(axis=1), np.array(self.activity.results_3).mean(axis=1), decimal=0)
         np_testing.assert_almost_equal(
-            np.array(self.results_3).std(axis=1), np.array(self.activity.results_3).std(axis=1), decimal=1)
+            np.array(self.results_3).std(axis=1), np.array(self.activity.results_3).std(axis=1), decimal=0)
 
 if __name__ == '__main__':
     unittest.main()

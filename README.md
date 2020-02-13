@@ -11,7 +11,9 @@ This is the repository for [The Deep Learning with Keras Workshop](https://www.p
 ## Requirements and Setup
 <a href="https://www.packtpub.com/programming/the-c-workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20CPP%20Workshop.png" alt="The CPP Workshop" height="270px" width="220px" align="right" this.target="_blank"></a>
 
-To get started with the project files, you'll need to install Anaconda on [Windows](https://www.anaconda.com/distribution/#windows), [Mac](https://www.anaconda.com/distribution/#macos), and [Linux](https://www.anaconda.com/distribution/#linux).
+To get started with the project files, you'll need to:
+1. Install Python on [Windows](https://www.python.org/downloads/windows/), [Mac](https://www.python.org/downloads/mac-osx/), [Linux](https://www.python.org/downloads/source/)
+2. install Anaconda on [Windows](https://www.anaconda.com/distribution/#windows), [Mac](https://www.anaconda.com/distribution/#macos), [Linux](https://www.anaconda.com/distribution/#linux)
 
 
 ## About The Deep Learning with Keras Workshop

@@ -1,3 +1,5 @@
+# 2020-0406 PP: requires import-ipynb 0.1.3 - se reuirements.txt
+# √ pip install import-ipynb
 import unittest
 import import_ipynb
 import pandas as pd

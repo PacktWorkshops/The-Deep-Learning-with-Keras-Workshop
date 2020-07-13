@@ -23,9 +23,12 @@ What sets Keras apart from other deep learning frameworks is its simplicity. Wit
 
 
 ## What you will learn
-* Get to grips with various model evaluation metrics, including sensitivity, specificity, and AUC scores 
-* Explore advanced concepts such as sequential memory and sequential modeling 
-* Reinforce your skills with real-world development, screencasts, and knowledge checks 
+* Gain insights into the fundamentals of neural networks 
+* Understand the limitations of machine learning and how it differs from deep learning 
+* Build image classifiers with convolutional neural networks 
+* Evaluate, tweak, and improve your models with techniques such as cross-validation 
+* Create prediction models to detect data patterns and make predictions 
+* Improve model accuracy with L1, L2, and dropout regularization 
 
 ## Related Workshops
 If you've found this repository useful, you might want to check out some of our other workshop titles:

@@ -6,7 +6,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktWorkshops/The-Deep-Learning-with-Keras-Workshop/pulls)
 [![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)](https://www.python.org/downloads/)
 
-This is the repository for [The Deep Learning with Keras Workshop](https://www.packtpub.com/programming/the-c-workshop), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
+This is the repository for The Deep Learning with Keras Workshop, published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
 <a href="https://www.packtpub.com/programming/the-c-workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/B16703_The%20Deep%20Learning%20with%20Keras%20Workshop.png" alt="The Deep Learning with Keras Workshop" height="340px" width="250px" align="right" this.target="_blank"></a>
@@ -17,7 +17,7 @@ To get started with the project files, you'll need to:
 
 
 ## About The Deep Learning with Keras Workshop
-New experiences can be intimidating, but not this one! The [The Deep Learning with Keras Workshop](https://www.packtpub.com/programming/the-c-workshop) is a beginner’s guide to deep learning to help you explore deep learning from scratch with Keras, and be on your way to training your first ever neural networks. 
+New experiences can be intimidating, but not this one! The Deep Learning with Keras Workshop is a beginner’s guide to deep learning to help you explore deep learning from scratch with Keras, and be on your way to training your first ever neural networks. 
 
 What sets Keras apart from other deep learning frameworks is its simplicity. With over two hundred thousand users, Keras has a stronger adoption in industry and the research community than any other deep learning framework.  
 

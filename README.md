@@ -9,7 +9,7 @@
 This is the repository for [The Deep Learning with Keras Workshop](https://www.packtpub.com/programming/the-c-workshop), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
-<a href="https://www.packtpub.com/programming/the-c-workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20Deep%20Learning%20with%20Keras%20Workshop.png" alt="The Deep Learning with Keras Workshop" height="270px" width="220px" align="right" this.target="_blank"></a>
+<a href="https://www.packtpub.com/programming/the-c-workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/B16703_The%20Deep%20Learning%20with%20Keras%20Workshop.png" alt="The Deep Learning with Keras Workshop" height="270px" width="220px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
 1. Install Python on [Windows](https://www.python.org/downloads/windows/), [Mac](https://www.python.org/downloads/mac-osx/), [Linux](https://www.python.org/downloads/source/)
@@ -17,15 +17,15 @@ To get started with the project files, you'll need to:
 
 
 ## About The Deep Learning with Keras Workshop
-You already know you want to learn Keras, and a smarter way to learn is by doing. [The Deep Learning with Keras Workshop](https://www.packtpub.com/programming/the-c-workshop) focuses on building up your practical skills so that you can develop artificial intelligence applications or build machine learning models with Keras. You'll learn from real examples that lead to real results.
+New experiences can be intimidating, but not this one! The [The Deep Learning with Keras Workshop](https://www.packtpub.com/programming/the-c-workshop) is a beginner’s guide to deep learning to help you explore deep learning from scratch with Keras, and be on your way to training your first ever neural networks. 
+
+What sets Keras apart from other deep learning frameworks is its simplicity. With over two hundred thousand users, Keras has a stronger adoption in industry and the research community than any other deep learning framework.  
 
 
 ## What you will learn
-* Gain insight into the fundamental concepts of neural networks
-* Learn to think like a data scientist and understand the difference between machine learning and deep learning
-* Discover various techniques to evaluate, tweak, and improve your models
-* Explore different techniques to manipulate your data
-* Explore alternative techniques to verify the accuracy of your model
+* Get to grips with various model evaluation metrics, including sensitivity, specificity, and AUC scores 
+* Explore advanced concepts such as sequential memory and sequential modeling 
+* Reinforce your skills with real-world development, screencasts, and knowledge checks 
 
 ## Related Workshops
 If you've found this repository useful, you might want to check out some of our other workshop titles:

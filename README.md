@@ -6,10 +6,10 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktWorkshops/The-Deep-Learning-with-Keras-Workshop/pulls)
 [![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)](https://www.python.org/downloads/)
 
-This is the repository for The Deep Learning with Keras Workshop, published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
+This is the repository for [The Deep Learning with Keras Workshop](https://www.amazon.com/Deep-Learning-Keras-Workshop-network-ebook/dp/B08Q8JJ45N/ref=sr_1_1?dchild=1&keywords=The%20Deep%20Learning%20with%20Keras%20Workshop&qid=1611054389&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781801071185&utm_term=Deep%20Learning%20with%20Keras&utm_content=The%20Deep%20Learning%20with%20Keras%20Workshop), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
-<a href="https://www.packtpub.com/programming/the-c-workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/B16703_The%20Deep%20Learning%20with%20Keras%20Workshop.png" alt="The Deep Learning with Keras Workshop" height="340px" width="250px" align="right" this.target="_blank"></a>
+<a href="https://www.amazon.com/Deep-Learning-Keras-Workshop-network-ebook/dp/B08Q8JJ45N/ref=sr_1_1?dchild=1&keywords=The%20Deep%20Learning%20with%20Keras%20Workshop&qid=1611054389&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781801071185&utm_term=Deep%20Learning%20with%20Keras&utm_content=The%20Deep%20Learning%20with%20Keras%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/B16703_The%20Deep%20Learning%20with%20Keras%20Workshop.png" alt="The Deep Learning with Keras Workshop" height="290px" width="230px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
 1. Install Python on [Windows](https://www.python.org/downloads/windows/), [Mac](https://www.python.org/downloads/mac-osx/), [Linux](https://www.python.org/downloads/source/)
@@ -17,9 +17,7 @@ To get started with the project files, you'll need to:
 
 
 ## About The Deep Learning with Keras Workshop
-New experiences can be intimidating, but not this one! The Deep Learning with Keras Workshop is a beginner’s guide to deep learning to help you explore deep learning from scratch with Keras, and be on your way to training your first ever neural networks. 
-
-What sets Keras apart from other deep learning frameworks is its simplicity. With over two hundred thousand users, Keras has a stronger adoption in industry and the research community than any other deep learning framework.  
+[The Deep Learning with Keras Workshop](https://www.amazon.com/Deep-Learning-Keras-Workshop-network-ebook/dp/B08Q8JJ45N/ref=sr_1_1?dchild=1&keywords=The%20Deep%20Learning%20with%20Keras%20Workshop&qid=1611054389&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781801071185&utm_term=Deep%20Learning%20with%20Keras&utm_content=The%20Deep%20Learning%20with%20Keras%20Workshop) outlines a simple and straightforward way for you to understand deep learning with Keras. Starting with basic concepts such as data preprocessing, this book equips you with all the tools and techniques required for training your neural networks to solve various modeling problems.	 
 
 
 ## What you will learn
@@ -32,6 +30,6 @@ What sets Keras apart from other deep learning frameworks is its simplicity. Wit
 
 ## Related Workshops
 If you've found this repository useful, you might want to check out some of our other workshop titles:
-* [The Python Workshop](https://courses.packtpub.com/courses/python?utm_source=github&utm_medium=repository&utm_campaign=9781839218859&utm_term=Python&utm_content=The%20Python%20Workshop)
-* [The Java Workshop](https://courses.packtpub.com/courses/java?utm_source=github&utm_medium=repository&utm_campaign=9781838986698&utm_term=Java&utm_content=The%20Java%20Workshop)
-* [The PHP Workshop](https://courses.packtpub.com/courses/php?utm_source=github&utm_medium=repository&utm_campaign=9781838648916&utm_term=PHP&utm_content=The%20PHP%20Workshop)
+* [The Deep Learning Workshop](https://www.amazon.com/Deep-Learning-Workshop-next-generation-TensorFlow-ebook/dp/B08Q8GP7DJ/ref=sr_1_2?dchild=1&keywords=The%20Deep%20Learning%20Workshop&qid=1611054533&sr=8-2&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781801075169&utm_term=Deep%20Learning&utm_content=The%20Deep%20Learning%20Workshop)
+* [The Deep Learning with PyTorch Workshop](https://www.amazon.com/Deep-Learning-PyTorch-Workshop-intelligence-ebook/dp/B08CF2VXHX/ref=sr_1_1?dchild=1&keywords=The%20Deep%20Learning%20with%20PyTorch%20Workshop&qid=1611053111&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781838989217&utm_term=Deep%20Learning%20with%20PyTorch&utm_content=The%20Deep%20Learning%20with%20PyTorch%20Workshop)
+* [The Applied TensorFlow and Keras Workshop](https://www.amazon.com/Applied-TensorFlow-Keras-Workshop-real-world-ebook/dp/B08Q8F55ZS/ref=sr_1_1?dchild=1&keywords=The%20Applied%20TensorFlow%20and%20Keras%20Workshop&qid=1610976724&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781801078153&utm_term=Applied%20TensorFlow%20and%20Keras&utm_content=The%20Applied%20TensorFlow%20and%20Keras%20Workshop)
